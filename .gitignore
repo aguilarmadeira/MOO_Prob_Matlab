@@ -1,0 +1,51 @@
+# MATLAB generated files
+*.asv
+*.m~
+*.mex*
+*.mlx
+
+# Simulink generated files
+*.slxc
+slprj/
+
+# Octave generated files
+octave-workspace
+
+# MAT-files (unless intentionally tracked)
+*.mat
+
+# MATLAB code generation
+codegen/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build outputs
+build/
+bin/
+*.o
+*.obj
+
+# Log files
+*.log
+
+# Test outputs
+results/
+output/

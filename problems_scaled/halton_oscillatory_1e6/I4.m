@@ -1,0 +1,219 @@
+function varargout = I4(varargin)
+%I4  Self-contained scaled MOO test problem.
+%
+% Wrapper/scaling formulation:
+%   J. F. A. Madeira (2026)
+%
+% Problem: I4
+% Dimension: n = 8, objectives m = 3
+% Strategy: halton_oscillatory (kappa = 1000000)
+% Effective contrast: 13795.07389162562
+% WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
+%
+% API:
+%   info = I4();
+%   [lb,ub] = I4('bounds');
+%   F = I4(x);
+%
+% Mapping:
+%   t      = clip01((x - lb_work)./(ub_work - lb_work))
+%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
+%   F      = I4_orig(x_orig)
+
+nloc = 8;
+mloc = 3;
+lb_orig = [0;0;0;0;0;0;0;0];
+ub_orig = [1;1;1;1;1;1;1;1];
+lb_work = [0;0;0;0;0;0;0;0];
+ub_work = [500500;250.75;750250;125.875;625375;375.625;875125;63.4375];
+scale_factors = [500500;250.75;750250;125.875;625375;375.625;875125;63.4375];
+contrast_ratio = 13795.07389162562;
+
+if nargin == 0
+    info.name = mfilename;
+    info.problem = 'I4';
+    info.n = nloc; info.m = mloc;
+    info.strategy = 'halton_oscillatory';
+    info.kappa = 1000000;
+    info.lb_orig = lb_orig; info.ub_orig = ub_orig;
+    info.lb_work = lb_work; info.ub_work = ub_work;
+    info.scale_factors = scale_factors;
+    info.contrast_ratio = contrast_ratio;
+    info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
+    varargout{1} = info;
+    return;
+end
+
+arg1 = varargin{1};
+if ischar(arg1) && strcmpi(arg1,'bounds')
+    varargout{1} = lb_work;
+    if nargout >= 2, varargout{2} = ub_work; end
+    return;
+end
+
+x = arg1(:);
+if numel(x) ~= nloc
+    error('Input x must have 8 components.');
+end
+range = ub_work - lb_work;
+range(range == 0) = 1;
+t = (x - lb_work)./range;
+t = max(0, min(1, t));
+x_orig = lb_orig + t.*(ub_orig - lb_orig);
+F = I4_orig(x_orig);
+varargout{1} = F(:);
+end
+
+% -------------------------------------------------------------------------
+% Embedded original problem function (verbatim; only renamed to I4_orig)
+% -------------------------------------------------------------------------
+function f = I4_orig(z)
+%###############################################################################
+%
+%   As described by Huband et al. in "A Scalable Multi-objective Test Problem
+%   Toolkit", in C. A. Coello Coello et al. (Eds.): EMO 2005, LNCS 3410, 
+%   pp. 280–295, 2005, Springer-Verlag Berlin Heidelberg 2005.
+%
+%   Example I4.
+%
+%   This file is part of a collection of problems developed for
+%   derivative-free multiobjective optimization in
+%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   Direct Multisearch for Multiobjective Optimization, 2010.
+%
+%   Written by the authors in June 1, 2010.
+%
+%   MATLAB version by J. F. A. Madeira
+%   November 7, 2025
+%
+%###############################################################################
+%
+% Problem characteristics:
+% - Number of variables: 8 (k=4, l=4)
+% - Number of objectives: 3
+% - Bounds: z in [0.0, 1.0]^8
+%
+
+
+% Parameters
+M = 3; % Number of objectives (fixed)
+k = 4;
+l = 4;
+n = k + l;
+
+% Check dimension
+if length(z) ~= n
+    error('I4 requires exactly %d variables, %d provided', n, length(z));
+end
+
+% Ensure z is a column vector
+z = z(:);
+
+% Constants
+pi2 = pi/2;
+S = ones(M, 1);
+A = ones(M-1, 1);
+
+% Transform z into [0,1] set
+zmax = ones(n, 1);
+y = z ./ zmax;
+
+% First level mapping
+t1 = y;
+
+% Second level mapping
+t2 = zeros(n, 1);
+for i = 1:n
+    if i <= k
+        t2(i) = t1(i);
+    else
+        t2(i) = abs(t1(i) - 0.35) / abs(floor(0.35 - t1(i)) + 0.35);
+    end
+end
+
+% Third level mapping
+t3 = zeros(M, 1);
+for i = 1:M
+    if i <= M-1
+        % Complex calculation for position-related transformation
+        j_start = round((i-1)*k/(M-1) + 1);
+        j_end = round(i*k/(M-1));
+        
+        sum_val = 0;
+        count = 0;
+        for ii = j_start:j_end
+            inner_sum = t2(ii);
+            for jj = 0:(k/(M-1)-2)
+                idx = j_start + mod(ii + jj - j_start + 1, j_end - j_start + 1);
+                inner_sum = inner_sum + abs(t2(ii) - t2(idx));
+            end
+            sum_val = sum_val + inner_sum;
+            count = count + 1;
+        end
+        
+        denominator = count / (k/(M-1)) * ceil(k/(M-1)/2) * (1 + 2*k/(M-1) - 2*ceil(k/(M-1)/2));
+        if denominator == 0
+            t3(i) = sum_val;
+        else
+            t3(i) = sum_val / denominator;
+        end
+    else
+        % For the last objective
+        sum_val = 0;
+        count = 0;
+        for ii = (k+1):n
+            inner_sum = t2(ii);
+            for jj = 0:(l-2)
+                idx = k + 1 + mod(ii + jj - (k+1) + 1, n - k);
+                inner_sum = inner_sum + abs(t2(ii) - t2(idx));
+            end
+            sum_val = sum_val + inner_sum;
+            count = count + 1;
+        end
+        
+        denominator = (count/l) * ceil(l/2) * (1 + 2*l - 2*ceil(l/2));
+        if denominator == 0
+            t3(i) = sum_val;
+        else
+            t3(i) = sum_val / denominator;
+        end
+    end
+end
+
+% Define objective function variables
+x = zeros(M, 1);
+for i = 1:M
+    if i <= M-1
+        x(i) = max(t3(M), A(i)) * (t3(i) - 0.5) + 0.5;
+    else
+        x(i) = t3(M);
+    end
+end
+
+% Define shape function h
+h = zeros(M, 1);
+for m = 1:M
+    if m == 1
+        h(m) = 1;
+        for i = 1:M-1
+            h(m) = h(m) * sin(x(i) * pi2);
+        end
+    elseif m <= M-1
+        h(m) = 1;
+        for i = 1:M-m
+            h(m) = h(m) * sin(x(i) * pi2);
+        end
+        h(m) = h(m) * cos(x(M-m+1) * pi2);
+    else
+        h(m) = cos(x(1) * pi2);
+    end
+end
+
+% Calculate objectives
+f = zeros(M, 1);
+for m = 1:M
+    f(m) = x(M) + S(m) * h(m);
+end
+
+end
+
