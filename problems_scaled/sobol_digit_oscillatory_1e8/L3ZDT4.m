@@ -1,25 +1,56 @@
 function varargout = L3ZDT4(varargin)
-%L3ZDT4  Self-contained scaled MOO test problem.
+%L3ZDT4  L3ZDT4 (n=30, m=2) test problem (heterogeneous WORK-space wrapper).
 %
-% Wrapper/scaling formulation:
-%   J. F. A. Madeira (2026)
+% INPUT SPACE (SOBOL_DIGIT_OSCILLATORY HETEROGENEITY):
 %
-% Problem: L3ZDT4
-% Dimension: n = 30, objectives m = 2
-% Strategy: sobol_digit_oscillatory (kappa = 100000000)
-% Effective contrast: 210798.7836482823
+%   x1   ∈ [0           , 1.76189e+06 ]   (range: 1.76189e+06 )
+%   x2   ∈ [0           , 8644.12     ]   (range: 8644.12     )
+%   x3   ∈ [0           , 4.73937e+07 ]   (range: 4.73937e+07 )
+%   x4   ∈ [0           , 6265.87     ]   (range: 6265.87     )
+%   x5   ∈ [0           , 2.32796e+07 ]   (range: 2.32796e+07 )
+%   x6   ∈ [0           , 8853.65     ]   (range: 8853.65     )
+%   x7   ∈ [0           , 2.76428e+07 ]   (range: 2.76428e+07 )
+%   x8   ∈ [0           , 6232.4      ]   (range: 6232.4      )
+%   x9   ∈ [0           , 863.12      ]   (range: 863.12      )
+%   x10  ∈ [0           , 8092.16     ]   (range: 8092.16     )
+%   x11  ∈ [0           , 4.18976e+07 ]   (range: 4.18976e+07 )
+%   x12  ∈ [0           , 6.95515e+07 ]   (range: 6.95515e+07 )
+%   x13  ∈ [0           , 1.49174e+07 ]   (range: 1.49174e+07 )
+%   x14  ∈ [0           , 9965.77     ]   (range: 9965.77     )
+%   x15  ∈ [0           , 3556.26     ]   (range: 3556.26     )
+%   x16  ∈ [0           , 5.08641e+07 ]   (range: 5.08641e+07 )
+%   x17  ∈ [0           , 456.834     ]   (range: 456.834     )
+%   x18  ∈ [0           , 8227.51     ]   (range: 8227.51     )
+%   x19  ∈ [0           , 4630.53     ]   (range: 4630.53     )
+%   x20  ∈ [0           , 6863.43     ]   (range: 6863.43     )
+%   x21  ∈ [0           , 2042.44     ]   (range: 2042.44     )
+%   x22  ∈ [0           , 9.27514e+07 ]   (range: 9.27514e+07 )
+%   x23  ∈ [0           , 2868.24     ]   (range: 2868.24     )
+%   x24  ∈ [0           , 5.63973e+07 ]   (range: 5.63973e+07 )
+%   x25  ∈ [0           , 1.00753e+07 ]   (range: 1.00753e+07 )
+%   x26  ∈ [0           , 7536.88     ]   (range: 7536.88     )
+%   x27  ∈ [0           , 3942.51     ]   (range: 3942.51     )
+%   x28  ∈ [0           , 7.41674e+07 ]   (range: 7.41674e+07 )
+%   x29  ∈ [0           , 1.8642e+07  ]   (range: 1.8642e+07  )
+%   x30  ∈ [0           , 9.63e+07    ]   (range: 9.63e+07    )
+%
+% Effective contrast ratio (max range / min range): 210798.7836482823
 % WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
 %
-% API:
-%   info = L3ZDT4();
-%   [lb,ub] = L3ZDT4('bounds');
-%   F = L3ZDT4(x);
+% Pareto information:
+%   - This is a multiobjective problem. Optimality is defined by Pareto dominance.
+%   - No analytical Pareto front is documented for this problem.
 %
-% Mapping:
-%   t      = clip01((x - lb_work)./(ub_work - lb_work))
-%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
-%   F      = L3ZDT4_orig(x_orig)
-
+% USAGE:
+%   F = L3ZDT4(x)            % Evaluate objectives at point x (nD vector)
+%   [lb, ub] = L3ZDT4('bounds')  % Get bounds
+%   info = L3ZDT4()          % Get complete problem information
+%
+% Reference:
+%   J. F. A. Madeira,
+%   "Wrapper/scaling formulation for heterogeneous benchmarking in multiobjective optimization",
+%   2026.
+%
 nloc = 30;
 mloc = 2;
 lb_orig = [0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0];
@@ -32,23 +63,44 @@ contrast_ratio = 210798.7836482823;
 if nargin == 0
     info.name = mfilename;
     info.problem = 'L3ZDT4';
+    info.source = 'MOModels_Matlab';
+    info.dimension = nloc;
     info.n = nloc; info.m = mloc;
+    info.type = 'MOO';
     info.strategy = 'sobol_digit_oscillatory';
     info.kappa = 100000000;
     info.lb_orig = lb_orig; info.ub_orig = ub_orig;
     info.lb_work = lb_work; info.ub_work = ub_work;
     info.scale_factors = scale_factors;
     info.contrast_ratio = contrast_ratio;
+    info.pareto_front_known = false;
+    info.pf_type = 'unknown';
+    info.pf_expression = '';
+    info.pareto_set_known = false;
+    info.ps_expression = '';
+    info.ideal_point = [];
+    info.nadir_point = [];
+    info.quality_indicators = {'HV','IGD','Purity','Spread'};
+    info.reference_point_default = [];  % No nadir known; let driver define.
+    info.pareto_note = 'L3ZDT4: Expected PF same as ZDT1 (f2=1-sqrt(f1)); landscape-modified. Ref: Deb et al. (2006).';
+    info.mapping = 't=(x-lb_work)./(ub_work-lb_work); t=max(0,min(1,t)); x_orig=lb_orig+t.*(ub_orig-lb_orig)';
     info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
     varargout{1} = info;
-    return;
+    return
 end
 
 arg1 = varargin{1};
-if ischar(arg1) && strcmpi(arg1,'bounds')
+if isempty(arg1)
+    error('Input argument is empty. Use F=f(x) or [lb,ub]=f(''bounds'').');
+end
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1))) && strcmpi(char(arg1),'bounds')
     varargout{1} = lb_work;
     if nargout >= 2, varargout{2} = ub_work; end
-    return;
+    return
+end
+
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1)))
+    error('Unknown string argument ''%s''. Use ''bounds'' or call with x.', char(arg1));
 end
 
 x = arg1(:);
@@ -62,7 +114,8 @@ t = max(0, min(1, t));
 x_orig = lb_orig + t.*(ub_orig - lb_orig);
 F = L3ZDT4_orig(x_orig);
 varargout{1} = F(:);
-end
+return
+end  % main wrapper function
 
 % -------------------------------------------------------------------------
 % Embedded original problem function (verbatim; only renamed to L3ZDT4_orig)
@@ -77,18 +130,14 @@ function f = L3ZDT4_orig(x)
 %
 %   Example T4, with linkage L3.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a m-dimensional vector, where m = 30
-%   Output: f is a 2-dimensional vector with the function values
-
-% Number of variables
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 m = 30;
 
 % Transformation matrix M

@@ -11,20 +11,14 @@ function f = DTLZ1n2(x)
 %   CRITICAL FIX: Removed cosine terms from g(x)
 %   DTLZ1 has LINEAR g(x), DTLZ3 has MULTIMODAL g(x) with cosine terms
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: 2 (fixed)
-% - Number of objectives: 2 (fixed)
-% - Bounds: x in [0.0, 1.0]^2
-% - Pareto front: Linear with f1 + f2 = 0.5, fi in [0, 0.5]
-%
-
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 n = length(x);
 if n ~= 2
     error('DTLZ1n2 requires exactly 2 variables, %d provided', n);

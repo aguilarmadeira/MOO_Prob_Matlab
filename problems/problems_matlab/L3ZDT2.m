@@ -8,20 +8,14 @@ function f = L3ZDT2(x)
 %
 %   Example T2, with linkage L3.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%   CORRECTED: Matrix M fixed on November 11, 2025 (rows 21-30 had duplicated values)
-%
-%   Input: x is a m-dimensional vector, where m = 30
-%   Output: f is a 2-dimensional vector with the function values
-%   Output: c is a vector of constraints (empty for this problem)
-
-% Número de variáveis
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 m = 30;
 
 % Matrix M (matriz de transformação) - CORRECTED VERSION

@@ -7,24 +7,14 @@ function f = MLF2(x)
 %
 %   Example MLF2, see the previous cited paper for the original reference.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a 2-dimensional vector
-%   Output: f is a 2-dimensional vector with the function values
-%   Output: c is a vector of constraints (empty for this problem - bounds are
-%          handled by the optimization algorithm)
-
-% Nota: Este problema é originalmente de maximização, 
-% mas para manter a consistência com a interface da coleção DMS,
-% convertemos para minimização multiplicando por -1.
-
-% Cálculo da variável y
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 y = 2 * x;
 
 % Função objetivo 1

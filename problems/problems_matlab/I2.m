@@ -7,26 +7,14 @@ function f = I2(z)
 %
 %   Example I2.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%
-%   MATLAB version by J. F. A. Madeira
-%   November 7, 2025
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: 8 (k=4, l=4)
-% - Number of objectives: 3
-% - Bounds: z in [0.0, 1.0]^8
-%
-
-
-% Parameters
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 M = 3; % Number of objectives (fixed)
 k = 4;
 l = 4;

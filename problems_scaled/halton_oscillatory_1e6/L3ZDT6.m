@@ -1,25 +1,36 @@
 function varargout = L3ZDT6(varargin)
-%L3ZDT6  Self-contained scaled MOO test problem.
+%L3ZDT6  L3ZDT6 (n=10, m=2) test problem (heterogeneous WORK-space wrapper).
 %
-% Wrapper/scaling formulation:
-%   J. F. A. Madeira (2026)
+% INPUT SPACE (HALTON_OSCILLATORY HETEROGENEITY):
 %
-% Problem: L3ZDT6
-% Dimension: n = 10, objectives m = 2
-% Strategy: halton_oscillatory (kappa = 1000000)
-% Effective contrast: 13795.07389162562
+%   x1   ∈ [0           , 500500      ]   (range: 500500      )
+%   x2   ∈ [0           , 250.75      ]   (range: 250.75      )
+%   x3   ∈ [0           , 750250      ]   (range: 750250      )
+%   x4   ∈ [0           , 125.875     ]   (range: 125.875     )
+%   x5   ∈ [0           , 625375      ]   (range: 625375      )
+%   x6   ∈ [0           , 375.625     ]   (range: 375.625     )
+%   x7   ∈ [0           , 875125      ]   (range: 875125      )
+%   x8   ∈ [0           , 63.4375     ]   (range: 63.4375     )
+%   x9   ∈ [0           , 562938      ]   (range: 562938      )
+%   x10  ∈ [0           , 313.188     ]   (range: 313.188     )
+%
+% Effective contrast ratio (max range / min range): 13795.07389162562
 % WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
 %
-% API:
-%   info = L3ZDT6();
-%   [lb,ub] = L3ZDT6('bounds');
-%   F = L3ZDT6(x);
+% Pareto information:
+%   - This is a multiobjective problem. Optimality is defined by Pareto dominance.
+%   - No analytical Pareto front is documented for this problem.
 %
-% Mapping:
-%   t      = clip01((x - lb_work)./(ub_work - lb_work))
-%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
-%   F      = L3ZDT6_orig(x_orig)
-
+% USAGE:
+%   F = L3ZDT6(x)            % Evaluate objectives at point x (nD vector)
+%   [lb, ub] = L3ZDT6('bounds')  % Get bounds
+%   info = L3ZDT6()          % Get complete problem information
+%
+% Reference:
+%   J. F. A. Madeira,
+%   "Wrapper/scaling formulation for heterogeneous benchmarking in multiobjective optimization",
+%   2026.
+%
 nloc = 10;
 mloc = 2;
 lb_orig = [0;0;0;0;0;0;0;0;0;0];
@@ -32,23 +43,44 @@ contrast_ratio = 13795.07389162562;
 if nargin == 0
     info.name = mfilename;
     info.problem = 'L3ZDT6';
+    info.source = 'MOModels_Matlab';
+    info.dimension = nloc;
     info.n = nloc; info.m = mloc;
+    info.type = 'MOO';
     info.strategy = 'halton_oscillatory';
     info.kappa = 1000000;
     info.lb_orig = lb_orig; info.ub_orig = ub_orig;
     info.lb_work = lb_work; info.ub_work = ub_work;
     info.scale_factors = scale_factors;
     info.contrast_ratio = contrast_ratio;
+    info.pareto_front_known = false;
+    info.pf_type = 'unknown';
+    info.pf_expression = '';
+    info.pareto_set_known = false;
+    info.ps_expression = '';
+    info.ideal_point = [];
+    info.nadir_point = [];
+    info.quality_indicators = {'HV','IGD','Purity','Spread'};
+    info.reference_point_default = [];  % No nadir known; let driver define.
+    info.pareto_note = 'L3ZDT6: Expected PF same as ZDT6 (f2=1-f1^2); landscape-modified. Ref: Deb et al. (2006).';
+    info.mapping = 't=(x-lb_work)./(ub_work-lb_work); t=max(0,min(1,t)); x_orig=lb_orig+t.*(ub_orig-lb_orig)';
     info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
     varargout{1} = info;
-    return;
+    return
 end
 
 arg1 = varargin{1};
-if ischar(arg1) && strcmpi(arg1,'bounds')
+if isempty(arg1)
+    error('Input argument is empty. Use F=f(x) or [lb,ub]=f(''bounds'').');
+end
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1))) && strcmpi(char(arg1),'bounds')
     varargout{1} = lb_work;
     if nargout >= 2, varargout{2} = ub_work; end
-    return;
+    return
+end
+
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1)))
+    error('Unknown string argument ''%s''. Use ''bounds'' or call with x.', char(arg1));
 end
 
 x = arg1(:);
@@ -62,7 +94,8 @@ t = max(0, min(1, t));
 x_orig = lb_orig + t.*(ub_orig - lb_orig);
 F = L3ZDT6_orig(x_orig);
 varargout{1} = F(:);
-end
+return
+end  % main wrapper function
 
 % -------------------------------------------------------------------------
 % Embedded original problem function (verbatim; only renamed to L3ZDT6_orig)
@@ -80,19 +113,14 @@ function f = L3ZDT6_orig(x)
 %   In the above paper the number of variables was set to 30. 
 %   We selected n=10 according to the dimension of problem ZDT6.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a m-dimensional vector, where m = 10
-%   Output: f is a 2-dimensional vector with the function values
-%   Output: c is a vector of constraints (empty for this problem)
-
-% Número de variáveis
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 m = 10;
 pi = 4*atan(1);
 

@@ -7,23 +7,14 @@ function f = DTLZ1_4(x)
 %
 %   Example DTLZ1 with M = 4 objectives.
 %
-%   CORRECTED VERSION - November 2025
-%   CRITICAL FIX: Removed cosine terms from g(x)
-%   DTLZ1 has LINEAR g(x), DTLZ3 has MULTIMODAL g(x) with cosine terms
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization.
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: n >= 4 (recommended n = 13, i.e., k = 10)
-% - Number of objectives: M = 4 (fixed)
-% - Bounds: x in [0.0, 1.0]^n
-% - Pareto front: Linear simplex with sum(fi) = 0.5, fi in [0, 0.5]
-%
-
-% Get dimension
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 n = length(x);
 
 % Fixed parameters

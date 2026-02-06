@@ -7,19 +7,14 @@ function f = ZDT1(x)
 %
 %   Example T1.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a m-dimensional vector, where m = 30
-%   Output: f is a 2-dimensional vector with the function values
-%          handled by the optimization algorithm)
-
-% Número de variáveis
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 m = 30;
 
 % Função objetivo 1

@@ -7,18 +7,14 @@ function f = WFG9(z)
 %
 %   Example WFG9.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: z is a n-dimensional vector where n = k+l (k=4, l=4)
-%   Output: f is a M-dimensional vector (M=3) with the function values
-
-% Parameters
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 M = 3;      % number of objectives
 k = 4;      % number of position-related variables
 l = 4;      % number of distance-related variables

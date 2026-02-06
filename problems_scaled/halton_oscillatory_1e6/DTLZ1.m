@@ -1,25 +1,36 @@
 function varargout = DTLZ1(varargin)
-%DTLZ1  Self-contained scaled MOO test problem.
+%DTLZ1  DTLZ1 (n=7, m=3) test problem (heterogeneous WORK-space wrapper).
 %
-% Wrapper/scaling formulation:
-%   J. F. A. Madeira (2026)
+% INPUT SPACE (HALTON_OSCILLATORY HETEROGENEITY):
 %
-% Problem: DTLZ1
-% Dimension: n = 7, objectives m = 3
-% Strategy: halton_oscillatory (kappa = 1000000)
-% Effective contrast: 6952.333664349553
+%   x1   ∈ [0           , 500500      ]   (range: 500500      )
+%   x2   ∈ [0           , 250.75      ]   (range: 250.75      )
+%   x3   ∈ [0           , 750250      ]   (range: 750250      )
+%   x4   ∈ [0           , 125.875     ]   (range: 125.875     )
+%   x5   ∈ [0           , 625375      ]   (range: 625375      )
+%   x6   ∈ [0           , 375.625     ]   (range: 375.625     )
+%   x7   ∈ [0           , 875125      ]   (range: 875125      )
+%
+% Effective contrast ratio (max range / min range): 6952.333664349553
 % WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
 %
-% API:
-%   info = DTLZ1();
-%   [lb,ub] = DTLZ1('bounds');
-%   F = DTLZ1(x);
+% Pareto information:
+%   Pareto front: KNOWN (linear)
+%   PF expression: sum(f_i) = 0.5, f_i >= 0 (simplex)
+%   Ideal point: [0 0 0]
+%   Nadir point: [0.5 0.5 0.5]
+%   Pareto set: x_i = 0.5 for i = m..n (distance variables)
 %
-% Mapping:
-%   t      = clip01((x - lb_work)./(ub_work - lb_work))
-%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
-%   F      = DTLZ1_orig(x_orig)
-
+% USAGE:
+%   F = DTLZ1(x)            % Evaluate objectives at point x (nD vector)
+%   [lb, ub] = DTLZ1('bounds')  % Get bounds
+%   info = DTLZ1()          % Get complete problem information
+%
+% Reference:
+%   J. F. A. Madeira,
+%   "Wrapper/scaling formulation for heterogeneous benchmarking in multiobjective optimization",
+%   2026.
+%
 nloc = 7;
 mloc = 3;
 lb_orig = [0;0;0;0;0;0;0];
@@ -32,23 +43,44 @@ contrast_ratio = 6952.333664349553;
 if nargin == 0
     info.name = mfilename;
     info.problem = 'DTLZ1';
+    info.source = 'MOModels_Matlab';
+    info.dimension = nloc;
     info.n = nloc; info.m = mloc;
+    info.type = 'MOO';
     info.strategy = 'halton_oscillatory';
     info.kappa = 1000000;
     info.lb_orig = lb_orig; info.ub_orig = ub_orig;
     info.lb_work = lb_work; info.ub_work = ub_work;
     info.scale_factors = scale_factors;
     info.contrast_ratio = contrast_ratio;
+    info.pareto_front_known = true;
+    info.pf_type = 'linear';
+    info.pf_expression = 'sum(f_i) = 0.5, f_i >= 0 (simplex)';
+    info.pareto_set_known = true;
+    info.ps_expression = 'x_i = 0.5 for i = m..n (distance variables)';
+    info.ideal_point = [0;0;0];
+    info.nadir_point = [0.5;0.5;0.5];
+    info.quality_indicators = {'HV','IGD','Purity','Spread'};
+    info.reference_point_default = [0.6;0.6;0.6];
+    info.pareto_note = 'DTLZ1 (m=3): Linear simplex PF. Ref: Deb et al. (2002).';
+    info.mapping = 't=(x-lb_work)./(ub_work-lb_work); t=max(0,min(1,t)); x_orig=lb_orig+t.*(ub_orig-lb_orig)';
     info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
     varargout{1} = info;
-    return;
+    return
 end
 
 arg1 = varargin{1};
-if ischar(arg1) && strcmpi(arg1,'bounds')
+if isempty(arg1)
+    error('Input argument is empty. Use F=f(x) or [lb,ub]=f(''bounds'').');
+end
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1))) && strcmpi(char(arg1),'bounds')
     varargout{1} = lb_work;
     if nargout >= 2, varargout{2} = ub_work; end
-    return;
+    return
+end
+
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1)))
+    error('Unknown string argument ''%s''. Use ''bounds'' or call with x.', char(arg1));
 end
 
 x = arg1(:);
@@ -62,7 +94,8 @@ t = max(0, min(1, t));
 x_orig = lb_orig + t.*(ub_orig - lb_orig);
 F = DTLZ1_orig(x_orig);
 varargout{1} = F(:);
-end
+return
+end  % main wrapper function
 
 % -------------------------------------------------------------------------
 % Embedded original problem function (verbatim; only renamed to DTLZ1_orig)
@@ -76,30 +109,14 @@ function f = DTLZ1_orig(x)
 %
 %   Example DTLZ1.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%
-%   CORRECTED MATLAB version by J. F. A. Madeira
-%   November 16, 2025
-%
-%   CORRECTION: Fixed g(x) function - was using DTLZ3 formula instead of DTLZ1
-%   DTLZ1 has LINEAR g(x), DTLZ3 has MULTIMODAL g(x) with cosine terms
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: n >= M (default n = 7 for M = 3)
-% - Number of objectives: M >= 2 (default M = 3)
-% - Bounds: x in [0.0, 1.0]^n
-% - Pareto front: Linear simplex with sum(fi) = 0.5, fi in [0, 0.5]
-%
-
-
-% Fixed parameters for DTLZ1
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 M = 3;  % Number of objectives (fixed)
 n = length(x);
 

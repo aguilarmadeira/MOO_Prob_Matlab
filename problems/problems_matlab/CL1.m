@@ -7,27 +7,14 @@ function f = CL1(x)
 %
 %   Example 2, four bar truss.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%
-%   MATLAB version by J. F. A. Madeira
-%   November 7, 2025
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: 4 (fixed)
-% - Number of objectives: 2 (fixed)
-% - Bounds: x1 in [F/sigma, 3*F/sigma] = [1, 3]
-%           x2,x3 in [sqrt(2)*F/sigma, 3*F/sigma] = [sqrt(2), 3]
-%           x4 in [F/sigma, 3*F/sigma] = [1, 3]
-%
-
-% Check dimension
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 n = length(x);
 if n ~= 4
     error('CL1 requires exactly 4 variables, %d provided', n);

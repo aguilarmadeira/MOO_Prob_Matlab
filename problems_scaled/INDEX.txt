@@ -10,216 +10,216 @@ sobol_oscillatory_1e6/ex005.m    (n=2, m=2, kappa=1000000)
 sobol_digit_oscillatory_1e8/ex005.m    (n=2, m=2, kappa=100000000)
 spatial_thermal_9e4/ex005.m    (n=2, m=2, kappa=90000)
 halton_oscillatory_1e6/ex005.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb41.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb41.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb41.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb41.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb41.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb41.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb41.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb213.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb213.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb213.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb213.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb213.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb213.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb213.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb512a.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb512a.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb512a.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb512a.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb512a.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb512a.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb512a.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb512b.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb512b.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb512b.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb512b.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb512b.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb512b.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb512b.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb512c.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb512c.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb512c.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb512c.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb512c.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb512c.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb512c.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb513.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb513.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb513.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb513.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb513.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb513.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb513.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb521a.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb521a.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb521a.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb521a.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb521a.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb521a.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb521a.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb521b.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb521b.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb521b.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb521b.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb521b.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb521b.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb521b.m    (n=2, m=2, kappa=1000000)
-baseline_1/Deb53.m    (n=2, m=2, kappa=1)
-progressive_1e6/Deb53.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Deb53.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Deb53.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Deb53.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Deb53.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Deb53.m    (n=2, m=2, kappa=1000000)
-baseline_1/ZDT1.m    (n=30, m=2, kappa=1)
-progressive_1e6/ZDT1.m    (n=30, m=2, kappa=1000000)
-extreme_1e8/ZDT1.m    (n=30, m=2, kappa=100000000)
-sobol_oscillatory_1e6/ZDT1.m    (n=30, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/ZDT1.m    (n=30, m=2, kappa=100000000)
-spatial_thermal_9e4/ZDT1.m    (n=30, m=2, kappa=90000)
-halton_oscillatory_1e6/ZDT1.m    (n=30, m=2, kappa=1000000)
-baseline_1/ZDT2.m    (n=30, m=2, kappa=1)
-progressive_1e6/ZDT2.m    (n=30, m=2, kappa=1000000)
-extreme_1e8/ZDT2.m    (n=30, m=2, kappa=100000000)
-sobol_oscillatory_1e6/ZDT2.m    (n=30, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/ZDT2.m    (n=30, m=2, kappa=100000000)
-spatial_thermal_9e4/ZDT2.m    (n=30, m=2, kappa=90000)
-halton_oscillatory_1e6/ZDT2.m    (n=30, m=2, kappa=1000000)
-baseline_1/ZDT3.m    (n=30, m=2, kappa=1)
-progressive_1e6/ZDT3.m    (n=30, m=2, kappa=1000000)
-extreme_1e8/ZDT3.m    (n=30, m=2, kappa=100000000)
-sobol_oscillatory_1e6/ZDT3.m    (n=30, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/ZDT3.m    (n=30, m=2, kappa=100000000)
-spatial_thermal_9e4/ZDT3.m    (n=30, m=2, kappa=90000)
-halton_oscillatory_1e6/ZDT3.m    (n=30, m=2, kappa=1000000)
-baseline_1/ZDT4.m    (n=10, m=2, kappa=1)
-progressive_1e6/ZDT4.m    (n=10, m=2, kappa=1000000)
-extreme_1e8/ZDT4.m    (n=10, m=2, kappa=100000000)
-sobol_oscillatory_1e6/ZDT4.m    (n=10, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/ZDT4.m    (n=10, m=2, kappa=100000000)
-spatial_thermal_9e4/ZDT4.m    (n=10, m=2, kappa=90000)
-halton_oscillatory_1e6/ZDT4.m    (n=10, m=2, kappa=1000000)
-baseline_1/ZDT6.m    (n=10, m=2, kappa=1)
-progressive_1e6/ZDT6.m    (n=10, m=2, kappa=1000000)
-extreme_1e8/ZDT6.m    (n=10, m=2, kappa=100000000)
-sobol_oscillatory_1e6/ZDT6.m    (n=10, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/ZDT6.m    (n=10, m=2, kappa=100000000)
-spatial_thermal_9e4/ZDT6.m    (n=10, m=2, kappa=90000)
-halton_oscillatory_1e6/ZDT6.m    (n=10, m=2, kappa=1000000)
-baseline_1/DTLZ1.m    (n=7, m=3, kappa=1)
-progressive_1e6/DTLZ1.m    (n=7, m=3, kappa=1000000)
-extreme_1e8/DTLZ1.m    (n=7, m=3, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ1.m    (n=7, m=3, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ1.m    (n=7, m=3, kappa=100000000)
-spatial_thermal_9e4/DTLZ1.m    (n=7, m=3, kappa=90000)
-halton_oscillatory_1e6/DTLZ1.m    (n=7, m=3, kappa=1000000)
-baseline_1/DTLZ2.m    (n=12, m=3, kappa=1)
-progressive_1e6/DTLZ2.m    (n=12, m=3, kappa=1000000)
-extreme_1e8/DTLZ2.m    (n=12, m=3, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ2.m    (n=12, m=3, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ2.m    (n=12, m=3, kappa=100000000)
-spatial_thermal_9e4/DTLZ2.m    (n=12, m=3, kappa=90000)
-halton_oscillatory_1e6/DTLZ2.m    (n=12, m=3, kappa=1000000)
-baseline_1/DTLZ3.m    (n=12, m=3, kappa=1)
-progressive_1e6/DTLZ3.m    (n=12, m=3, kappa=1000000)
-extreme_1e8/DTLZ3.m    (n=12, m=3, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ3.m    (n=12, m=3, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ3.m    (n=12, m=3, kappa=100000000)
-spatial_thermal_9e4/DTLZ3.m    (n=12, m=3, kappa=90000)
-halton_oscillatory_1e6/DTLZ3.m    (n=12, m=3, kappa=1000000)
-baseline_1/DTLZ4.m    (n=12, m=3, kappa=1)
-progressive_1e6/DTLZ4.m    (n=12, m=3, kappa=1000000)
-extreme_1e8/DTLZ4.m    (n=12, m=3, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ4.m    (n=12, m=3, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ4.m    (n=12, m=3, kappa=100000000)
-spatial_thermal_9e4/DTLZ4.m    (n=12, m=3, kappa=90000)
-halton_oscillatory_1e6/DTLZ4.m    (n=12, m=3, kappa=1000000)
-baseline_1/DTLZ5.m    (n=12, m=3, kappa=1)
-progressive_1e6/DTLZ5.m    (n=12, m=3, kappa=1000000)
-extreme_1e8/DTLZ5.m    (n=12, m=3, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ5.m    (n=12, m=3, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ5.m    (n=12, m=3, kappa=100000000)
-spatial_thermal_9e4/DTLZ5.m    (n=12, m=3, kappa=90000)
-halton_oscillatory_1e6/DTLZ5.m    (n=12, m=3, kappa=1000000)
-baseline_1/DTLZ6.m    (n=22, m=3, kappa=1)
-progressive_1e6/DTLZ6.m    (n=22, m=3, kappa=1000000)
-extreme_1e8/DTLZ6.m    (n=22, m=3, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ6.m    (n=22, m=3, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ6.m    (n=22, m=3, kappa=100000000)
-spatial_thermal_9e4/DTLZ6.m    (n=22, m=3, kappa=90000)
-halton_oscillatory_1e6/DTLZ6.m    (n=22, m=3, kappa=1000000)
-baseline_1/DTLZ1n2.m    (n=2, m=2, kappa=1)
-progressive_1e6/DTLZ1n2.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/DTLZ1n2.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ1n2.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ1n2.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/DTLZ1n2.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/DTLZ1n2.m    (n=2, m=2, kappa=1000000)
-baseline_1/DTLZ2n2.m    (n=2, m=2, kappa=1)
-progressive_1e6/DTLZ2n2.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/DTLZ2n2.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ2n2.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ2n2.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/DTLZ2n2.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/DTLZ2n2.m    (n=2, m=2, kappa=1000000)
-baseline_1/DTLZ3n2.m    (n=2, m=2, kappa=1)
-progressive_1e6/DTLZ3n2.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/DTLZ3n2.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ3n2.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ3n2.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/DTLZ3n2.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/DTLZ3n2.m    (n=2, m=2, kappa=1000000)
-baseline_1/DTLZ4n2.m    (n=2, m=2, kappa=1)
-progressive_1e6/DTLZ4n2.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/DTLZ4n2.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ4n2.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ4n2.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/DTLZ4n2.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/DTLZ4n2.m    (n=2, m=2, kappa=1000000)
-baseline_1/DTLZ5n2.m    (n=2, m=2, kappa=1)
-progressive_1e6/DTLZ5n2.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/DTLZ5n2.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ5n2.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ5n2.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/DTLZ5n2.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/DTLZ5n2.m    (n=2, m=2, kappa=1000000)
-baseline_1/DTLZ6n2.m    (n=2, m=2, kappa=1)
-progressive_1e6/DTLZ6n2.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/DTLZ6n2.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ6n2.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ6n2.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/DTLZ6n2.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/DTLZ6n2.m    (n=2, m=2, kappa=1000000)
-baseline_1/DTLZ1_4.m    (n=7, m=4, kappa=1)
-progressive_1e6/DTLZ1_4.m    (n=7, m=4, kappa=1000000)
-extreme_1e8/DTLZ1_4.m    (n=7, m=4, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ1_4.m    (n=7, m=4, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ1_4.m    (n=7, m=4, kappa=100000000)
-spatial_thermal_9e4/DTLZ1_4.m    (n=7, m=4, kappa=90000)
-halton_oscillatory_1e6/DTLZ1_4.m    (n=7, m=4, kappa=1000000)
-baseline_1/DTLZ1_5.m    (n=7, m=5, kappa=1)
-progressive_1e6/DTLZ1_5.m    (n=7, m=5, kappa=1000000)
-extreme_1e8/DTLZ1_5.m    (n=7, m=5, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ1_5.m    (n=7, m=5, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ1_5.m    (n=7, m=5, kappa=100000000)
-spatial_thermal_9e4/DTLZ1_5.m    (n=7, m=5, kappa=90000)
-halton_oscillatory_1e6/DTLZ1_5.m    (n=7, m=5, kappa=1000000)
-baseline_1/DTLZ3_4.m    (n=12, m=4, kappa=1)
-progressive_1e6/DTLZ3_4.m    (n=12, m=4, kappa=1000000)
-extreme_1e8/DTLZ3_4.m    (n=12, m=4, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ3_4.m    (n=12, m=4, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ3_4.m    (n=12, m=4, kappa=100000000)
-spatial_thermal_9e4/DTLZ3_4.m    (n=12, m=4, kappa=90000)
-halton_oscillatory_1e6/DTLZ3_4.m    (n=12, m=4, kappa=1000000)
-baseline_1/DTLZ3_5.m    (n=12, m=5, kappa=1)
-progressive_1e6/DTLZ3_5.m    (n=12, m=5, kappa=1000000)
-extreme_1e8/DTLZ3_5.m    (n=12, m=5, kappa=100000000)
-sobol_oscillatory_1e6/DTLZ3_5.m    (n=12, m=5, kappa=1000000)
-sobol_digit_oscillatory_1e8/DTLZ3_5.m    (n=12, m=5, kappa=100000000)
-spatial_thermal_9e4/DTLZ3_5.m    (n=12, m=5, kappa=90000)
-halton_oscillatory_1e6/DTLZ3_5.m    (n=12, m=5, kappa=1000000)
+baseline_1/Deb41.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb41.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb41.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb41.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb41.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb41.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb41.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb213.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb213.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb213.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb213.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb213.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb213.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb213.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb512a.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb512a.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb512a.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb512a.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb512a.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb512a.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb512a.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb512b.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb512b.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb512b.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb512b.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb512b.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb512b.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb512b.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb512c.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb512c.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb512c.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb512c.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb512c.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb512c.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb512c.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb513.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb513.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb513.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb513.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb513.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb513.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb513.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb521a.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb521a.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb521a.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb521a.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb521a.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb521a.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb521a.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb521b.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb521b.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb521b.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb521b.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb521b.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb521b.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb521b.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/Deb53.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Deb53.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Deb53.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Deb53.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Deb53.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Deb53.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Deb53.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/ZDT1.m    (n=30, m=2, kappa=1) [PF known]
+progressive_1e6/ZDT1.m    (n=30, m=2, kappa=1000000) [PF known]
+extreme_1e8/ZDT1.m    (n=30, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/ZDT1.m    (n=30, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/ZDT1.m    (n=30, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/ZDT1.m    (n=30, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/ZDT1.m    (n=30, m=2, kappa=1000000) [PF known]
+baseline_1/ZDT2.m    (n=30, m=2, kappa=1) [PF known]
+progressive_1e6/ZDT2.m    (n=30, m=2, kappa=1000000) [PF known]
+extreme_1e8/ZDT2.m    (n=30, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/ZDT2.m    (n=30, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/ZDT2.m    (n=30, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/ZDT2.m    (n=30, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/ZDT2.m    (n=30, m=2, kappa=1000000) [PF known]
+baseline_1/ZDT3.m    (n=30, m=2, kappa=1) [PF known]
+progressive_1e6/ZDT3.m    (n=30, m=2, kappa=1000000) [PF known]
+extreme_1e8/ZDT3.m    (n=30, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/ZDT3.m    (n=30, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/ZDT3.m    (n=30, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/ZDT3.m    (n=30, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/ZDT3.m    (n=30, m=2, kappa=1000000) [PF known]
+baseline_1/ZDT4.m    (n=10, m=2, kappa=1) [PF known]
+progressive_1e6/ZDT4.m    (n=10, m=2, kappa=1000000) [PF known]
+extreme_1e8/ZDT4.m    (n=10, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/ZDT4.m    (n=10, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/ZDT4.m    (n=10, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/ZDT4.m    (n=10, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/ZDT4.m    (n=10, m=2, kappa=1000000) [PF known]
+baseline_1/ZDT6.m    (n=10, m=2, kappa=1) [PF known]
+progressive_1e6/ZDT6.m    (n=10, m=2, kappa=1000000) [PF known]
+extreme_1e8/ZDT6.m    (n=10, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/ZDT6.m    (n=10, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/ZDT6.m    (n=10, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/ZDT6.m    (n=10, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/ZDT6.m    (n=10, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ1.m    (n=7, m=3, kappa=1) [PF known]
+progressive_1e6/DTLZ1.m    (n=7, m=3, kappa=1000000) [PF known]
+extreme_1e8/DTLZ1.m    (n=7, m=3, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ1.m    (n=7, m=3, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ1.m    (n=7, m=3, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ1.m    (n=7, m=3, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ1.m    (n=7, m=3, kappa=1000000) [PF known]
+baseline_1/DTLZ2.m    (n=12, m=3, kappa=1) [PF known]
+progressive_1e6/DTLZ2.m    (n=12, m=3, kappa=1000000) [PF known]
+extreme_1e8/DTLZ2.m    (n=12, m=3, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ2.m    (n=12, m=3, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ2.m    (n=12, m=3, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ2.m    (n=12, m=3, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ2.m    (n=12, m=3, kappa=1000000) [PF known]
+baseline_1/DTLZ3.m    (n=12, m=3, kappa=1) [PF known]
+progressive_1e6/DTLZ3.m    (n=12, m=3, kappa=1000000) [PF known]
+extreme_1e8/DTLZ3.m    (n=12, m=3, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ3.m    (n=12, m=3, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ3.m    (n=12, m=3, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ3.m    (n=12, m=3, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ3.m    (n=12, m=3, kappa=1000000) [PF known]
+baseline_1/DTLZ4.m    (n=12, m=3, kappa=1) [PF known]
+progressive_1e6/DTLZ4.m    (n=12, m=3, kappa=1000000) [PF known]
+extreme_1e8/DTLZ4.m    (n=12, m=3, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ4.m    (n=12, m=3, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ4.m    (n=12, m=3, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ4.m    (n=12, m=3, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ4.m    (n=12, m=3, kappa=1000000) [PF known]
+baseline_1/DTLZ5.m    (n=12, m=3, kappa=1) [PF known]
+progressive_1e6/DTLZ5.m    (n=12, m=3, kappa=1000000) [PF known]
+extreme_1e8/DTLZ5.m    (n=12, m=3, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ5.m    (n=12, m=3, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ5.m    (n=12, m=3, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ5.m    (n=12, m=3, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ5.m    (n=12, m=3, kappa=1000000) [PF known]
+baseline_1/DTLZ6.m    (n=22, m=3, kappa=1) [PF known]
+progressive_1e6/DTLZ6.m    (n=22, m=3, kappa=1000000) [PF known]
+extreme_1e8/DTLZ6.m    (n=22, m=3, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ6.m    (n=22, m=3, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ6.m    (n=22, m=3, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ6.m    (n=22, m=3, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ6.m    (n=22, m=3, kappa=1000000) [PF known]
+baseline_1/DTLZ1n2.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/DTLZ1n2.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/DTLZ1n2.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ1n2.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ1n2.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ1n2.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ1n2.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ2n2.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/DTLZ2n2.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/DTLZ2n2.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ2n2.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ2n2.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ2n2.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ2n2.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ3n2.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/DTLZ3n2.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/DTLZ3n2.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ3n2.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ3n2.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ3n2.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ3n2.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ4n2.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/DTLZ4n2.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/DTLZ4n2.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ4n2.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ4n2.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ4n2.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ4n2.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ5n2.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/DTLZ5n2.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/DTLZ5n2.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ5n2.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ5n2.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ5n2.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ5n2.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ6n2.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/DTLZ6n2.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/DTLZ6n2.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ6n2.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ6n2.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ6n2.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ6n2.m    (n=2, m=2, kappa=1000000) [PF known]
+baseline_1/DTLZ1_4.m    (n=7, m=4, kappa=1) [PF known]
+progressive_1e6/DTLZ1_4.m    (n=7, m=4, kappa=1000000) [PF known]
+extreme_1e8/DTLZ1_4.m    (n=7, m=4, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ1_4.m    (n=7, m=4, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ1_4.m    (n=7, m=4, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ1_4.m    (n=7, m=4, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ1_4.m    (n=7, m=4, kappa=1000000) [PF known]
+baseline_1/DTLZ1_5.m    (n=7, m=5, kappa=1) [PF known]
+progressive_1e6/DTLZ1_5.m    (n=7, m=5, kappa=1000000) [PF known]
+extreme_1e8/DTLZ1_5.m    (n=7, m=5, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ1_5.m    (n=7, m=5, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ1_5.m    (n=7, m=5, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ1_5.m    (n=7, m=5, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ1_5.m    (n=7, m=5, kappa=1000000) [PF known]
+baseline_1/DTLZ3_4.m    (n=12, m=4, kappa=1) [PF known]
+progressive_1e6/DTLZ3_4.m    (n=12, m=4, kappa=1000000) [PF known]
+extreme_1e8/DTLZ3_4.m    (n=12, m=4, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ3_4.m    (n=12, m=4, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ3_4.m    (n=12, m=4, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ3_4.m    (n=12, m=4, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ3_4.m    (n=12, m=4, kappa=1000000) [PF known]
+baseline_1/DTLZ3_5.m    (n=12, m=5, kappa=1) [PF known]
+progressive_1e6/DTLZ3_5.m    (n=12, m=5, kappa=1000000) [PF known]
+extreme_1e8/DTLZ3_5.m    (n=12, m=5, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/DTLZ3_5.m    (n=12, m=5, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/DTLZ3_5.m    (n=12, m=5, kappa=100000000) [PF known]
+spatial_thermal_9e4/DTLZ3_5.m    (n=12, m=5, kappa=90000) [PF known]
+halton_oscillatory_1e6/DTLZ3_5.m    (n=12, m=5, kappa=1000000) [PF known]
 baseline_1/Kursawe.m    (n=3, m=2, kappa=1)
 progressive_1e6/Kursawe.m    (n=3, m=2, kappa=1000000)
 extreme_1e8/Kursawe.m    (n=3, m=2, kappa=100000000)
@@ -227,13 +227,13 @@ sobol_oscillatory_1e6/Kursawe.m    (n=3, m=2, kappa=1000000)
 sobol_digit_oscillatory_1e8/Kursawe.m    (n=3, m=2, kappa=100000000)
 spatial_thermal_9e4/Kursawe.m    (n=3, m=2, kappa=90000)
 halton_oscillatory_1e6/Kursawe.m    (n=3, m=2, kappa=1000000)
-baseline_1/Fonseca.m    (n=2, m=2, kappa=1)
-progressive_1e6/Fonseca.m    (n=2, m=2, kappa=1000000)
-extreme_1e8/Fonseca.m    (n=2, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Fonseca.m    (n=2, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Fonseca.m    (n=2, m=2, kappa=100000000)
-spatial_thermal_9e4/Fonseca.m    (n=2, m=2, kappa=90000)
-halton_oscillatory_1e6/Fonseca.m    (n=2, m=2, kappa=1000000)
+baseline_1/Fonseca.m    (n=2, m=2, kappa=1) [PF known]
+progressive_1e6/Fonseca.m    (n=2, m=2, kappa=1000000) [PF known]
+extreme_1e8/Fonseca.m    (n=2, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Fonseca.m    (n=2, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Fonseca.m    (n=2, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Fonseca.m    (n=2, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Fonseca.m    (n=2, m=2, kappa=1000000) [PF known]
 baseline_1/L2ZDT4.m    (n=30, m=2, kappa=1)
 progressive_1e6/L2ZDT4.m    (n=30, m=2, kappa=1000000)
 extreme_1e8/L2ZDT4.m    (n=30, m=2, kappa=100000000)
@@ -381,20 +381,20 @@ sobol_oscillatory_1e6/I5.m    (n=8, m=3, kappa=1000000)
 sobol_digit_oscillatory_1e8/I5.m    (n=8, m=3, kappa=100000000)
 spatial_thermal_9e4/I5.m    (n=8, m=3, kappa=90000)
 halton_oscillatory_1e6/I5.m    (n=8, m=3, kappa=1000000)
-baseline_1/MOP1.m    (n=1, m=2, kappa=1)
-progressive_1e6/MOP1.m    (n=1, m=2, kappa=1000000)
-extreme_1e8/MOP1.m    (n=1, m=2, kappa=100000000)
-sobol_oscillatory_1e6/MOP1.m    (n=1, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/MOP1.m    (n=1, m=2, kappa=100000000)
-spatial_thermal_9e4/MOP1.m    (n=1, m=2, kappa=90000)
-halton_oscillatory_1e6/MOP1.m    (n=1, m=2, kappa=1000000)
-baseline_1/MOP2.m    (n=4, m=2, kappa=1)
-progressive_1e6/MOP2.m    (n=4, m=2, kappa=1000000)
-extreme_1e8/MOP2.m    (n=4, m=2, kappa=100000000)
-sobol_oscillatory_1e6/MOP2.m    (n=4, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/MOP2.m    (n=4, m=2, kappa=100000000)
-spatial_thermal_9e4/MOP2.m    (n=4, m=2, kappa=90000)
-halton_oscillatory_1e6/MOP2.m    (n=4, m=2, kappa=1000000)
+baseline_1/MOP1.m    (n=1, m=2, kappa=1) [PF known]
+progressive_1e6/MOP1.m    (n=1, m=2, kappa=1000000) [PF known]
+extreme_1e8/MOP1.m    (n=1, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/MOP1.m    (n=1, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/MOP1.m    (n=1, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/MOP1.m    (n=1, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/MOP1.m    (n=1, m=2, kappa=1000000) [PF known]
+baseline_1/MOP2.m    (n=4, m=2, kappa=1) [PF known]
+progressive_1e6/MOP2.m    (n=4, m=2, kappa=1000000) [PF known]
+extreme_1e8/MOP2.m    (n=4, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/MOP2.m    (n=4, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/MOP2.m    (n=4, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/MOP2.m    (n=4, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/MOP2.m    (n=4, m=2, kappa=1000000) [PF known]
 baseline_1/MOP3.m    (n=2, m=2, kappa=1)
 progressive_1e6/MOP3.m    (n=2, m=2, kappa=1000000)
 extreme_1e8/MOP3.m    (n=2, m=2, kappa=100000000)
@@ -591,13 +591,13 @@ sobol_oscillatory_1e6/QV1.m    (n=10, m=2, kappa=1000000)
 sobol_digit_oscillatory_1e8/QV1.m    (n=10, m=2, kappa=100000000)
 spatial_thermal_9e4/QV1.m    (n=10, m=2, kappa=90000)
 halton_oscillatory_1e6/QV1.m    (n=10, m=2, kappa=1000000)
-baseline_1/Sch1.m    (n=1, m=2, kappa=1)
-progressive_1e6/Sch1.m    (n=1, m=2, kappa=1000000)
-extreme_1e8/Sch1.m    (n=1, m=2, kappa=100000000)
-sobol_oscillatory_1e6/Sch1.m    (n=1, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/Sch1.m    (n=1, m=2, kappa=100000000)
-spatial_thermal_9e4/Sch1.m    (n=1, m=2, kappa=90000)
-halton_oscillatory_1e6/Sch1.m    (n=1, m=2, kappa=1000000)
+baseline_1/Sch1.m    (n=1, m=2, kappa=1) [PF known]
+progressive_1e6/Sch1.m    (n=1, m=2, kappa=1000000) [PF known]
+extreme_1e8/Sch1.m    (n=1, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/Sch1.m    (n=1, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/Sch1.m    (n=1, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/Sch1.m    (n=1, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/Sch1.m    (n=1, m=2, kappa=1000000) [PF known]
 baseline_1/SP1.m    (n=2, m=2, kappa=1)
 progressive_1e6/SP1.m    (n=2, m=2, kappa=1000000)
 extreme_1e8/SP1.m    (n=2, m=2, kappa=100000000)
@@ -612,13 +612,13 @@ sobol_oscillatory_1e6/SSFYY1.m    (n=2, m=2, kappa=1000000)
 sobol_digit_oscillatory_1e8/SSFYY1.m    (n=2, m=2, kappa=100000000)
 spatial_thermal_9e4/SSFYY1.m    (n=2, m=2, kappa=90000)
 halton_oscillatory_1e6/SSFYY1.m    (n=2, m=2, kappa=1000000)
-baseline_1/SSFYY2.m    (n=1, m=2, kappa=1)
-progressive_1e6/SSFYY2.m    (n=1, m=2, kappa=1000000)
-extreme_1e8/SSFYY2.m    (n=1, m=2, kappa=100000000)
-sobol_oscillatory_1e6/SSFYY2.m    (n=1, m=2, kappa=1000000)
-sobol_digit_oscillatory_1e8/SSFYY2.m    (n=1, m=2, kappa=100000000)
-spatial_thermal_9e4/SSFYY2.m    (n=1, m=2, kappa=90000)
-halton_oscillatory_1e6/SSFYY2.m    (n=1, m=2, kappa=1000000)
+baseline_1/SSFYY2.m    (n=1, m=2, kappa=1) [PF known]
+progressive_1e6/SSFYY2.m    (n=1, m=2, kappa=1000000) [PF known]
+extreme_1e8/SSFYY2.m    (n=1, m=2, kappa=100000000) [PF known]
+sobol_oscillatory_1e6/SSFYY2.m    (n=1, m=2, kappa=1000000) [PF known]
+sobol_digit_oscillatory_1e8/SSFYY2.m    (n=1, m=2, kappa=100000000) [PF known]
+spatial_thermal_9e4/SSFYY2.m    (n=1, m=2, kappa=90000) [PF known]
+halton_oscillatory_1e6/SSFYY2.m    (n=1, m=2, kappa=1000000) [PF known]
 baseline_1/SK1.m    (n=1, m=2, kappa=1)
 progressive_1e6/SK1.m    (n=1, m=2, kappa=1000000)
 extreme_1e8/SK1.m    (n=1, m=2, kappa=100000000)

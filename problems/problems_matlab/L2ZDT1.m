@@ -8,12 +8,13 @@ function f= L2ZDT1(x)
 %
 % Example T1 (ZDT1), with linkage L2.
 %
-% This file is part of a collection of problems developed for
-% derivative-free multiobjective optimization in
-% A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-% Direct Multisearch for Multiobjective Optimization, 2011.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-% Converted to MATLAB format by J. F. A. Madeira in 2025.
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
 
     % Problem dimensions
     n = 30;  % number of variables

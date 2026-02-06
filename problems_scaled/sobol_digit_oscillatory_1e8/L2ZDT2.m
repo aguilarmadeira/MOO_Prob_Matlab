@@ -1,25 +1,56 @@
 function varargout = L2ZDT2(varargin)
-%L2ZDT2  Self-contained scaled MOO test problem.
+%L2ZDT2  L2ZDT2 (n=30, m=2) test problem (heterogeneous WORK-space wrapper).
 %
-% Wrapper/scaling formulation:
-%   J. F. A. Madeira (2026)
+% INPUT SPACE (SOBOL_DIGIT_OSCILLATORY HETEROGENEITY):
 %
-% Problem: L2ZDT2
-% Dimension: n = 30, objectives m = 2
-% Strategy: sobol_digit_oscillatory (kappa = 100000000)
-% Effective contrast: 388579.4374980549
+%   x1   ∈ [0           , 2028.67     ]   (range: 2028.67     )
+%   x2   ∈ [0           , 5736.32     ]   (range: 5736.32     )
+%   x3   ∈ [0           , 3.41921e+07 ]   (range: 3.41921e+07 )
+%   x4   ∈ [0           , 9.63822e+07 ]   (range: 9.63822e+07 )
+%   x5   ∈ [0           , 248.037     ]   (range: 248.037     )
+%   x6   ∈ [0           , 6.5403e+07  ]   (range: 6.5403e+07  )
+%   x7   ∈ [0           , 3.83747e+07 ]   (range: 3.83747e+07 )
+%   x8   ∈ [0           , 7.61837e+07 ]   (range: 7.61837e+07 )
+%   x9   ∈ [0           , 1702.6      ]   (range: 1702.6      )
+%   x10  ∈ [0           , 5.41789e+07 ]   (range: 5.41789e+07 )
+%   x11  ∈ [0           , 3124.87     ]   (range: 3124.87     )
+%   x12  ∈ [0           , 9327.11     ]   (range: 9327.11     )
+%   x13  ∈ [0           , 629.028     ]   (range: 629.028     )
+%   x14  ∈ [0           , 6.92098e+07 ]   (range: 6.92098e+07 )
+%   x15  ∈ [0           , 4.55107e+07 ]   (range: 4.55107e+07 )
+%   x16  ∈ [0           , 8.33044e+07 ]   (range: 8.33044e+07 )
+%   x17  ∈ [0           , 2416.5      ]   (range: 2416.5      )
+%   x18  ∈ [0           , 6.12966e+07 ]   (range: 6.12966e+07 )
+%   x19  ∈ [0           , 3506.17     ]   (range: 3506.17     )
+%   x20  ∈ [0           , 9707.5      ]   (range: 9707.5      )
+%   x21  ∈ [0           , 3.30125e+06 ]   (range: 3.30125e+06 )
+%   x22  ∈ [0           , 6614.44     ]   (range: 6614.44     )
+%   x23  ∈ [0           , 4220.43     ]   (range: 4220.43     )
+%   x24  ∈ [0           , 8016.58     ]   (range: 8016.58     )
+%   x25  ∈ [0           , 1.47283e+07 ]   (range: 1.47283e+07 )
+%   x26  ∈ [0           , 5178.95     ]   (range: 5178.95     )
+%   x27  ∈ [0           , 2.56982e+07 ]   (range: 2.56982e+07 )
+%   x28  ∈ [0           , 8.78853e+07 ]   (range: 8.78853e+07 )
+%   x29  ∈ [0           , 1.07125e+07 ]   (range: 1.07125e+07 )
+%   x30  ∈ [0           , 7.27958e+07 ]   (range: 7.27958e+07 )
+%
+% Effective contrast ratio (max range / min range): 388579.4374980549
 % WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
 %
-% API:
-%   info = L2ZDT2();
-%   [lb,ub] = L2ZDT2('bounds');
-%   F = L2ZDT2(x);
+% Pareto information:
+%   - This is a multiobjective problem. Optimality is defined by Pareto dominance.
+%   - No analytical Pareto front is documented for this problem.
 %
-% Mapping:
-%   t      = clip01((x - lb_work)./(ub_work - lb_work))
-%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
-%   F      = L2ZDT2_orig(x_orig)
-
+% USAGE:
+%   F = L2ZDT2(x)            % Evaluate objectives at point x (nD vector)
+%   [lb, ub] = L2ZDT2('bounds')  % Get bounds
+%   info = L2ZDT2()          % Get complete problem information
+%
+% Reference:
+%   J. F. A. Madeira,
+%   "Wrapper/scaling formulation for heterogeneous benchmarking in multiobjective optimization",
+%   2026.
+%
 nloc = 30;
 mloc = 2;
 lb_orig = [0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0];
@@ -32,23 +63,44 @@ contrast_ratio = 388579.4374980549;
 if nargin == 0
     info.name = mfilename;
     info.problem = 'L2ZDT2';
+    info.source = 'MOModels_Matlab';
+    info.dimension = nloc;
     info.n = nloc; info.m = mloc;
+    info.type = 'MOO';
     info.strategy = 'sobol_digit_oscillatory';
     info.kappa = 100000000;
     info.lb_orig = lb_orig; info.ub_orig = ub_orig;
     info.lb_work = lb_work; info.ub_work = ub_work;
     info.scale_factors = scale_factors;
     info.contrast_ratio = contrast_ratio;
+    info.pareto_front_known = false;
+    info.pf_type = 'unknown';
+    info.pf_expression = '';
+    info.pareto_set_known = false;
+    info.ps_expression = '';
+    info.ideal_point = [];
+    info.nadir_point = [];
+    info.quality_indicators = {'HV','IGD','Purity','Spread'};
+    info.reference_point_default = [];  % No nadir known; let driver define.
+    info.pareto_note = 'L2ZDT2: Expected PF same as ZDT2 (f2=1-f1^2); landscape-modified. Ref: Deb et al. (2006).';
+    info.mapping = 't=(x-lb_work)./(ub_work-lb_work); t=max(0,min(1,t)); x_orig=lb_orig+t.*(ub_orig-lb_orig)';
     info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
     varargout{1} = info;
-    return;
+    return
 end
 
 arg1 = varargin{1};
-if ischar(arg1) && strcmpi(arg1,'bounds')
+if isempty(arg1)
+    error('Input argument is empty. Use F=f(x) or [lb,ub]=f(''bounds'').');
+end
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1))) && strcmpi(char(arg1),'bounds')
     varargout{1} = lb_work;
     if nargout >= 2, varargout{2} = ub_work; end
-    return;
+    return
+end
+
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1)))
+    error('Unknown string argument ''%s''. Use ''bounds'' or call with x.', char(arg1));
 end
 
 x = arg1(:);
@@ -62,7 +114,8 @@ t = max(0, min(1, t));
 x_orig = lb_orig + t.*(ub_orig - lb_orig);
 F = L2ZDT2_orig(x_orig);
 varargout{1} = F(:);
-end
+return
+end  % main wrapper function
 
 % -------------------------------------------------------------------------
 % Embedded original problem function (verbatim; only renamed to L2ZDT2_orig)

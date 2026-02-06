@@ -1,25 +1,59 @@
 function varargout = ZDT1(varargin)
-%ZDT1  Self-contained scaled MOO test problem.
+%ZDT1  ZDT1 (n=30, m=2) test problem (heterogeneous WORK-space wrapper).
 %
-% Wrapper/scaling formulation:
-%   J. F. A. Madeira (2026)
+% INPUT SPACE (BASELINE HETEROGENEITY):
 %
-% Problem: ZDT1
-% Dimension: n = 30, objectives m = 2
-% Strategy: baseline (kappa = 1)
-% Effective contrast: 1
+%   x1   ∈ [0           , 1           ]   (range: 1           )
+%   x2   ∈ [0           , 1           ]   (range: 1           )
+%   x3   ∈ [0           , 1           ]   (range: 1           )
+%   x4   ∈ [0           , 1           ]   (range: 1           )
+%   x5   ∈ [0           , 1           ]   (range: 1           )
+%   x6   ∈ [0           , 1           ]   (range: 1           )
+%   x7   ∈ [0           , 1           ]   (range: 1           )
+%   x8   ∈ [0           , 1           ]   (range: 1           )
+%   x9   ∈ [0           , 1           ]   (range: 1           )
+%   x10  ∈ [0           , 1           ]   (range: 1           )
+%   x11  ∈ [0           , 1           ]   (range: 1           )
+%   x12  ∈ [0           , 1           ]   (range: 1           )
+%   x13  ∈ [0           , 1           ]   (range: 1           )
+%   x14  ∈ [0           , 1           ]   (range: 1           )
+%   x15  ∈ [0           , 1           ]   (range: 1           )
+%   x16  ∈ [0           , 1           ]   (range: 1           )
+%   x17  ∈ [0           , 1           ]   (range: 1           )
+%   x18  ∈ [0           , 1           ]   (range: 1           )
+%   x19  ∈ [0           , 1           ]   (range: 1           )
+%   x20  ∈ [0           , 1           ]   (range: 1           )
+%   x21  ∈ [0           , 1           ]   (range: 1           )
+%   x22  ∈ [0           , 1           ]   (range: 1           )
+%   x23  ∈ [0           , 1           ]   (range: 1           )
+%   x24  ∈ [0           , 1           ]   (range: 1           )
+%   x25  ∈ [0           , 1           ]   (range: 1           )
+%   x26  ∈ [0           , 1           ]   (range: 1           )
+%   x27  ∈ [0           , 1           ]   (range: 1           )
+%   x28  ∈ [0           , 1           ]   (range: 1           )
+%   x29  ∈ [0           , 1           ]   (range: 1           )
+%   x30  ∈ [0           , 1           ]   (range: 1           )
+%
+% Effective contrast ratio (max range / min range): 1
 % WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
 %
-% API:
-%   info = ZDT1();
-%   [lb,ub] = ZDT1('bounds');
-%   F = ZDT1(x);
+% Pareto information:
+%   Pareto front: KNOWN (convex)
+%   PF expression: f2 = 1 - sqrt(f1), f1 in [0,1]
+%   Ideal point: [0 0]
+%   Nadir point: [1 1]
+%   Pareto set: x1 in [0,1], x_i = 0 for i = 2..n
 %
-% Mapping:
-%   t      = clip01((x - lb_work)./(ub_work - lb_work))
-%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
-%   F      = ZDT1_orig(x_orig)
-
+% USAGE:
+%   F = ZDT1(x)            % Evaluate objectives at point x (nD vector)
+%   [lb, ub] = ZDT1('bounds')  % Get bounds
+%   info = ZDT1()          % Get complete problem information
+%
+% Reference:
+%   J. F. A. Madeira,
+%   "Wrapper/scaling formulation for heterogeneous benchmarking in multiobjective optimization",
+%   2026.
+%
 nloc = 30;
 mloc = 2;
 lb_orig = [0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0];
@@ -32,23 +66,44 @@ contrast_ratio = 1;
 if nargin == 0
     info.name = mfilename;
     info.problem = 'ZDT1';
+    info.source = 'MOModels_Matlab';
+    info.dimension = nloc;
     info.n = nloc; info.m = mloc;
+    info.type = 'MOO';
     info.strategy = 'baseline';
     info.kappa = 1;
     info.lb_orig = lb_orig; info.ub_orig = ub_orig;
     info.lb_work = lb_work; info.ub_work = ub_work;
     info.scale_factors = scale_factors;
     info.contrast_ratio = contrast_ratio;
+    info.pareto_front_known = true;
+    info.pf_type = 'convex';
+    info.pf_expression = 'f2 = 1 - sqrt(f1), f1 in [0,1]';
+    info.pareto_set_known = true;
+    info.ps_expression = 'x1 in [0,1], x_i = 0 for i = 2..n';
+    info.ideal_point = [0;0];
+    info.nadir_point = [1;1];
+    info.quality_indicators = {'HV','IGD','Purity','Spread'};
+    info.reference_point_default = [1.1;1.1];
+    info.pareto_note = 'ZDT1: Convex PF. Ref: Zitzler et al. (2000).';
+    info.mapping = 't=(x-lb_work)./(ub_work-lb_work); t=max(0,min(1,t)); x_orig=lb_orig+t.*(ub_orig-lb_orig)';
     info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
     varargout{1} = info;
-    return;
+    return
 end
 
 arg1 = varargin{1};
-if ischar(arg1) && strcmpi(arg1,'bounds')
+if isempty(arg1)
+    error('Input argument is empty. Use F=f(x) or [lb,ub]=f(''bounds'').');
+end
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1))) && strcmpi(char(arg1),'bounds')
     varargout{1} = lb_work;
     if nargout >= 2, varargout{2} = ub_work; end
-    return;
+    return
+end
+
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1)))
+    error('Unknown string argument ''%s''. Use ''bounds'' or call with x.', char(arg1));
 end
 
 x = arg1(:);
@@ -62,7 +117,8 @@ t = max(0, min(1, t));
 x_orig = lb_orig + t.*(ub_orig - lb_orig);
 F = ZDT1_orig(x_orig);
 varargout{1} = F(:);
-end
+return
+end  % main wrapper function
 
 % -------------------------------------------------------------------------
 % Embedded original problem function (verbatim; only renamed to ZDT1_orig)
@@ -76,19 +132,14 @@ function f = ZDT1_orig(x)
 %
 %   Example T1.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a m-dimensional vector, where m = 30
-%   Output: f is a 2-dimensional vector with the function values
-%          handled by the optimization algorithm)
-
-% Número de variáveis
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 m = 30;
 
 % Função objetivo 1

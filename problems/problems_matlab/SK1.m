@@ -12,24 +12,14 @@ function f = SK1(x)
 %   In the above paper/papers the variables bounds were not set.
 %   We considered -10<=x<=10.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a scalar variable
-%   Output: f is a 2-dimensional vector with the function values
-%   Output: c is a vector of constraints (empty for this problem - bounds are
-%          handled by the optimization algorithm)
-
-% Nota: Este problema é originalmente de maximização, 
-% mas para manter a consistência com a interface da coleção DMS,
-% convertemos para minimização multiplicando por -1.
-
-% Função objetivo 1
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 f1 = -(-x^4 - 3*x^3 + 10*x^2 + 10*x + 10);
 
 % Função objetivo 2

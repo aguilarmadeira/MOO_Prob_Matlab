@@ -1,25 +1,27 @@
 function varargout = SK1(varargin)
-%SK1  Self-contained scaled MOO test problem.
+%SK1  SK1 (n=1, m=2) test problem (heterogeneous WORK-space wrapper).
 %
-% Wrapper/scaling formulation:
-%   J. F. A. Madeira (2026)
+% INPUT SPACE (SOBOL_DIGIT_OSCILLATORY HETEROGENEITY):
 %
-% Problem: SK1
-% Dimension: n = 1, objectives m = 2
-% Strategy: sobol_digit_oscillatory (kappa = 100000000)
-% Effective contrast: 1
+%   x1   ∈ [0           , 8.5134e+07  ]   (range: 8.5134e+07  )
+%
+% Effective contrast ratio (max range / min range): 1
 % WARNING: Bounds missing/incomplete in header; using canonical fallback [0,1]^n.
 %
-% API:
-%   info = SK1();
-%   [lb,ub] = SK1('bounds');
-%   F = SK1(x);
+% Pareto information:
+%   - This is a multiobjective problem. Optimality is defined by Pareto dominance.
+%   - No analytical Pareto front is documented for this problem.
 %
-% Mapping:
-%   t      = clip01((x - lb_work)./(ub_work - lb_work))
-%   x_orig = lb_orig + t.*(ub_orig - lb_orig)
-%   F      = SK1_orig(x_orig)
-
+% USAGE:
+%   F = SK1(x)            % Evaluate objectives at point x (nD vector)
+%   [lb, ub] = SK1('bounds')  % Get bounds
+%   info = SK1()          % Get complete problem information
+%
+% Reference:
+%   J. F. A. Madeira,
+%   "Wrapper/scaling formulation for heterogeneous benchmarking in multiobjective optimization",
+%   2026.
+%
 nloc = 1;
 mloc = 2;
 lb_orig = 0;
@@ -32,23 +34,44 @@ contrast_ratio = 1;
 if nargin == 0
     info.name = mfilename;
     info.problem = 'SK1';
+    info.source = 'MOModels_Matlab';
+    info.dimension = nloc;
     info.n = nloc; info.m = mloc;
+    info.type = 'MOO';
     info.strategy = 'sobol_digit_oscillatory';
     info.kappa = 100000000;
     info.lb_orig = lb_orig; info.ub_orig = ub_orig;
     info.lb_work = lb_work; info.ub_work = ub_work;
     info.scale_factors = scale_factors;
     info.contrast_ratio = contrast_ratio;
+    info.pareto_front_known = false;
+    info.pf_type = 'unknown';
+    info.pf_expression = '';
+    info.pareto_set_known = false;
+    info.ps_expression = '';
+    info.ideal_point = [];
+    info.nadir_point = [];
+    info.quality_indicators = {'HV','IGD','Purity','Spread'};
+    info.reference_point_default = [];  % No nadir known; let driver define.
+    info.pareto_note = 'SK1: 1D problem. PF depends on function definition. Ref: Huband et al. (2006).';
+    info.mapping = 't=(x-lb_work)./(ub_work-lb_work); t=max(0,min(1,t)); x_orig=lb_orig+t.*(ub_orig-lb_orig)';
     info.warning = 'Bounds missing/incomplete in header; using canonical fallback [0,1]^n.';
     varargout{1} = info;
-    return;
+    return
 end
 
 arg1 = varargin{1};
-if ischar(arg1) && strcmpi(arg1,'bounds')
+if isempty(arg1)
+    error('Input argument is empty. Use F=f(x) or [lb,ub]=f(''bounds'').');
+end
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1))) && strcmpi(char(arg1),'bounds')
     varargout{1} = lb_work;
     if nargout >= 2, varargout{2} = ub_work; end
-    return;
+    return
+end
+
+if (ischar(arg1) || (isstring(arg1) && isscalar(arg1)))
+    error('Unknown string argument ''%s''. Use ''bounds'' or call with x.', char(arg1));
 end
 
 x = arg1(:);
@@ -62,7 +85,8 @@ t = max(0, min(1, t));
 x_orig = lb_orig + t.*(ub_orig - lb_orig);
 F = SK1_orig(x_orig);
 varargout{1} = F(:);
-end
+return
+end  % main wrapper function
 
 % -------------------------------------------------------------------------
 % Embedded original problem function (verbatim; only renamed to SK1_orig)
@@ -81,24 +105,14 @@ function f = SK1_orig(x)
 %   In the above paper/papers the variables bounds were not set.
 %   We considered -10<=x<=10.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a scalar variable
-%   Output: f is a 2-dimensional vector with the function values
-%   Output: c is a vector of constraints (empty for this problem - bounds are
-%          handled by the optimization algorithm)
-
-% Nota: Este problema é originalmente de maximização, 
-% mas para manter a consistência com a interface da coleção DMS,
-% convertemos para minimização multiplicando por -1.
-
-% Função objetivo 1
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 f1 = -(-x^4 - 3*x^3 + 10*x^2 + 10*x + 10);
 
 % Função objetivo 2

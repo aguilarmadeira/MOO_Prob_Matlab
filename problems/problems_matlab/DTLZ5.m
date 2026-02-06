@@ -7,26 +7,14 @@ function f = DTLZ5(x)
 %
 %   Example DTLZ5.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. CustÃ³dio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%
-%   MATLAB version by J. F. A. Madeira
-%   November 7, 2025
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: n >= M (default n = 12 for M = 3)
-% - Number of objectives: M >= 2 (default M = 3)
-% - Bounds: x in [0.0, 1.0]^n
-%
-
-
-% Fixed parameters for DTLZ5
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 M = 3;  % Number of objectives (fixed)
 n = length(x);
 

@@ -11,24 +11,14 @@ function f = Deb53(x)
 %   We considered 0.0 <= x[i] <= 1.0, i=1,2. The function f1 corresponds
 %   to equation (16) and gx to equation (10).
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%
-%   MATLAB version by J. F. A. Madeira
-%   November 7, 2025
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: 2
-% - Number of objectives: 2
-% - Bounds: x in [0.0, 1.0] x [0.0, 1.0]
-%
-
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 M = 2; % Number of objectives (fixed)
 
 % Check dimension

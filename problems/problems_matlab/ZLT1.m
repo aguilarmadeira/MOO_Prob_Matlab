@@ -10,20 +10,14 @@ function f = ZLT1(x)
 %   In the above paper the number of variables was set equal to 100. 
 %   We selected n=10 as default.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%   Adapted to MATLAB format in November 2025.
-%
-%   Input: x is a n-dimensional vector, where n = 10
-%   Output: f is a M-dimensional vector (M=3) with the function values
-%   Output: c is a vector of constraints (empty for this problem - bounds are
-%          handled by the optimization algorithm)
-
-% Parâmetros
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 n = 10;  % número de variáveis
 M = 3;   % número de funções objetivo
 

@@ -7,30 +7,14 @@ function f = DTLZ1(x)
 %
 %   Example DTLZ1.
 %
-%   This file is part of a collection of problems developed for
-%   derivative-free multiobjective optimization in
-%   A. L. Custódio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
-%   Direct Multisearch for Multiobjective Optimization, 2010.
+%   This file implements a multiobjective test problem originally
+%   formulated in AMPL and used in
+%    A. L. Custodio, J. F. A. Madeira, A. I. F. Vaz, and L. N. Vicente,
+%   "Direct Multisearch for Multiobjective Optimization", 2011.
 %
-%   Written by the authors in June 1, 2010.
-%
-%   CORRECTED MATLAB version by J. F. A. Madeira
-%   November 16, 2025
-%
-%   CORRECTION: Fixed g(x) function - was using DTLZ3 formula instead of DTLZ1
-%   DTLZ1 has LINEAR g(x), DTLZ3 has MULTIMODAL g(x) with cosine terms
-%
-%###############################################################################
-%
-% Problem characteristics:
-% - Number of variables: n >= M (default n = 7 for M = 3)
-% - Number of objectives: M >= 2 (default M = 3)
-% - Bounds: x in [0.0, 1.0]^n
-% - Pareto front: Linear simplex with sum(fi) = 0.5, fi in [0, 0.5]
-%
-
-
-% Fixed parameters for DTLZ1
+%   This MATLAB file was written in 2025 by J. F. A. Madeira,
+%   based on the original AMPL formulations.
+% 
 M = 3;  % Number of objectives (fixed)
 n = length(x);
 
