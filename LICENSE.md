@@ -1,15 +1,15 @@
 # License
 
-This repository contains both software (code) and documentation. Different licenses apply to each component.
+This repository is dual-licensed.
+
+| Component     | License        | Applies to  |
+| ------------- | -------------- | ----------- |
+| Source code   | MIT            | `.m` files  |
+| Documentation | CC-BY 4.0      | `.md` files |
 
 ---
 
-## Software License (MIT)
-
-**Applies to:** All `.m` files, scripts, and source code.
-
-```
-MIT License
+## MIT License (source code, `.m` files)
 
 Copyright (c) 2026 José F. Aguilar Madeira
 
@@ -30,54 +30,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
 
 ---
 
-## Documentation License (CC-BY 4.0)
+## Creative Commons Attribution 4.0 International (documentation, `.md` files)
 
-**Applies to:** All `.md` files, documentation, and descriptive content.
+The documentation in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC-BY 4.0).
 
-[![CC BY 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+You are free to share and adapt the material for any purpose, even
+commercially, under the condition that you give appropriate credit.
 
-This documentation is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-
-### You are free to:
-
-- **Share** — copy and redistribute the material in any medium or format
-- **Adapt** — remix, transform, and build upon the material for any purpose, even commercially
-
-### Under the following terms:
-
-- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-
-### Attribution requirement:
-
-If you use this benchmark suite in your research, please cite:
-
-```bibtex
-@misc{madeira2026moobenchmark,
-  author       = {Madeira, Jos{\'e} F. Aguilar},
-  title        = {{MOO} Benchmark Problems for {MATLAB}: Test Functions 
-                  for Multiobjective Optimization},
-  year         = {2026},
-  publisher    = {GitHub},
-  url          = {https://github.com/aguilarmadeira/MOO_Prob_Matlab}
-}
-```
-
----
-
-## Summary Table
-
-| Component | License | File types |
-|-----------|---------|------------|
-| Source code | MIT | `.m` files |
-| Documentation | CC-BY 4.0 | `.md`, `.txt` |
-
----
-
-## Questions?
-
-For licensing questions, contact:  
-José F. Aguilar Madeira — aguilarmadeira@tecnico.ulisboa.pt
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
