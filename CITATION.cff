@@ -1,77 +1,48 @@
 cff-version: 1.2.0
-title: >-
-  MOO Benchmark Problems for MATLAB: Test Functions 
-  for Multiobjective Optimization
-message: >-
-  If you use this software, please cite it using
-  the metadata from this file.
-type: software
+message: "If you use these benchmark suites, please cite the following."
+title: "MOO_Prob_Matlab: MATLAB benchmark suites for multiobjective optimization under continuous and mixed-variable scale heterogeneity"
+abstract: >-
+  The 108 base multiobjective optimization problems (MATLAB conversions of the
+  original Direct Multisearch AMPL formulations) together with two parallel
+  collections of self-contained MATLAB test problems (108 problems each)
+  instantiated under eight scaling strategies, over continuous and
+  mixed-variable decision spaces, for benchmarking derivative-free
+  multiobjective optimization algorithms.
+type: dataset
+version: 1.0.0
+date-released: 2026-05-29
+license: MIT
+url: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
+repository-code: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
 authors:
   - family-names: Madeira
     given-names: José F. Aguilar
-    email: aguilarmadeira@tecnico.ulisboa.pt
     orcid: "https://orcid.org/0000-0001-9523-3808"
-    affiliation: >-
-      IDMEC, Instituto Superior Técnico, Universidade de Lisboa; 
-      ISEL, Instituto Politécnico de Lisboa
-repository-code: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
-url: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
-license: MIT
-version: "1.0.0"
-date-released: "2026-01-13"
+    affiliation: "IDMEC, Instituto Superior Técnico, Universidade de Lisboa; ISEL, Instituto Politécnico de Lisboa"
+    email: aguilarmadeira@tecnico.ulisboa.pt
 keywords:
   - multiobjective optimization
   - derivative-free optimization
   - benchmark problems
-  - test functions
-  - Pareto front
-  - direct-search methods
-  - MATLAB
-  - DMS
+  - mixed-variable optimization
   - scale invariance
-abstract: >-
-  A comprehensive benchmark suite for multiobjective derivative-free optimization,
-  containing 108 bound-constrained test problems with dimensions ranging from
-  n=1 to n=30 and number of objectives m=2 to m=5. The suite includes problems
-  from the ZDT, DTLZ, WFG, MOP, Lovison, Jin, and other standard families.
-  All functions are implemented in MATLAB with a standardized interface.
-  Additionally, scaled variants of all problems are provided under 7 different
-  scaling strategies (contrast ratios from κ=1 to κ=10^8) for testing algorithm
-  robustness under heterogeneous variable scales.
-identifiers:
-  - type: url
-    value: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
-    description: GitHub repository
-funding:
-  - name: "Fundação para a Ciência e a Tecnologia (FCT)"
-    award: "LAETA - UID/50022/2025"
-    doi: "10.54499/UID/50022/2025"
+  - MATLAB
 references:
   - type: article
+    title: "Direct Multisearch for Multiobjective Optimization"
     authors:
       - family-names: Custódio
-        given-names: Ana Luísa
+        given-names: A. L.
       - family-names: Madeira
-        given-names: José F. Aguilar
+        given-names: J. F. A.
       - family-names: Vaz
-        given-names: A. Ismael F.
+        given-names: A. I. F.
       - family-names: Vicente
-        given-names: Luís Nunes
-    title: >-
-      Direct Multisearch for Multiobjective Optimization
-    journal: SIAM Journal on Optimization
+        given-names: L. N.
+    journal: "SIAM Journal on Optimization"
     volume: 21
     issue: 3
     start: 1109
     end: 1140
     year: 2011
     doi: "10.1137/10079731X"
-  - type: article
-    authors:
-      - family-names: Madeira
-        given-names: José F. Aguilar
-    title: >-
-      DMS-SI: Direct Multisearch – A Scale-Invariant Approach 
-      for Multiobjective Optimization
-    year: 2025
-    status: submitted

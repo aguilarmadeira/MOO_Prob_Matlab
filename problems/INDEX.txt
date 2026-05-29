@@ -1,0 +1,3 @@
+# INDEX — base problems (original DMS formulations)
+# Columns: problem_name   n   m   source_family
+# (to be populated with the 108 base problems on release)
