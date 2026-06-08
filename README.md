@@ -90,6 +90,13 @@ mixed-variable problem files are named `<problem>_mix.m`.
 | `sobol_digit_oscillatory`     | 1e6              | Binary quasi-random           |
 | `halton_oscillatory`          | 1e6              | Alternative QMC sequence      |
 
+> **Note on `sobol_digit_oscillatory`.** In this multiobjective suite the
+> digit-oscillatory contrast is **κ = 1e6**, matching the configuration used in
+> the DMS-SI-Mix study. The single-objective companion suite
+> [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite)
+> uses **κ = 1e8** for the same strategy family; the two values are intentional
+> and reflect the settings of their respective studies.
+
 ## Quick start
 
 ### Continuous problems
