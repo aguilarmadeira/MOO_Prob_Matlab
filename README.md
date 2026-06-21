@@ -7,6 +7,7 @@ decision spaces.
 
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20783713.svg)](https://doi.org/10.5281/zenodo.20783713)
 
 ## Overview
 
@@ -22,7 +23,7 @@ parallel collections of self-contained MATLAB test problems, each comprising
   applied across coordinates.
 - **`problems_mixed/`** — heterogeneous mixed-variable problems. A subset
   of coordinates is converted to ordered discrete or categorical variables;
-  scale heterogeneity is applied to the continuous block.
+  scale heterogeneity is applied to the continuous block. The six mixed pairs reported in the DMS-SI-Mix study are flagged in `problems_mixed/INDEX.txt`.
 
 Both scaled collections are derived from the same 108 base multiobjective
 functions drawn from the ZDT, DTLZ, WFG, MOP, Lovison, Jin, Deb, and related
@@ -158,14 +159,15 @@ F        = CAM1(lb + rand(info.n,1).*(ub-lb));
 If you use these benchmark suites, please cite:
 
 ```bibtex
-@misc{Madeira_MOO_Prob_Matlab,
-  author       = {J. F. A. Madeira},
-  title        = {{MOO\_Prob\_Matlab}: {MATLAB} benchmark suites for
-                  multiobjective optimization under continuous and
-                  mixed-variable scale heterogeneity},
-  year         = {2026},
-  howpublished = {\url{https://github.com/aguilarmadeira/MOO_Prob_Matlab}},
-  note         = {{GitHub} repository, version 1.0.0}
+@software{Madeira_MOO_Prob_Matlab_2026,
+  author    = {Madeira, J. F. A.},
+  title     = {{MOO\_Prob\_Matlab}: Continuous and mixed-variable {MATLAB}
+               benchmark suites for multiobjective optimization},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.20783714},
+  url       = {https://doi.org/10.5281/zenodo.20783714}
 }
 ```
 
@@ -201,7 +203,7 @@ conversions are provided in `problems/`.
 
 ## Contact
 
-**José F. Aguilar Madeira**
+**J. F. A. Madeira**
 IDMEC, Instituto Superior Técnico, Universidade de Lisboa
 ISEL, Instituto Politécnico de Lisboa
 Email: aguilarmadeira@tecnico.ulisboa.pt

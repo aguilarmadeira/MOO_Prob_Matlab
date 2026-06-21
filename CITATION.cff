@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these benchmark suites, please cite the following."
-title: "MOO_Prob_Matlab: MATLAB benchmark suites for multiobjective optimization under continuous and mixed-variable scale heterogeneity"
+title: "MOO_Prob_Matlab: Continuous and mixed-variable MATLAB benchmark suites for multiobjective optimization"
 abstract: >-
   The 108 base multiobjective optimization problems (MATLAB conversions of the
   original Direct Multisearch AMPL formulations) together with two parallel
@@ -8,15 +8,16 @@ abstract: >-
   instantiated under eight scaling strategies, over continuous and
   mixed-variable decision spaces, for benchmarking derivative-free
   multiobjective optimization algorithms.
-type: dataset
+type: software
 version: 1.0.0
 date-released: 2026-05-29
+doi: '10.5281/zenodo.20783714'
 license: MIT
 url: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
 repository-code: "https://github.com/aguilarmadeira/MOO_Prob_Matlab"
 authors:
   - family-names: Madeira
-    given-names: José F. Aguilar
+    given-names: J. F. A.
     orcid: "https://orcid.org/0000-0001-9523-3808"
     affiliation: "IDMEC, Instituto Superior Técnico, Universidade de Lisboa; ISEL, Instituto Politécnico de Lisboa"
     email: aguilarmadeira@tecnico.ulisboa.pt
